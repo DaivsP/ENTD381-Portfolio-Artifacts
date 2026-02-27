@@ -3,7 +3,7 @@
 ## Narrative
 Creating Object-Oriented Programs is the core of my technical expertise. I was initially trained in OOP principles during my early years as a developer, where I learned to model real-world entities into reusable code components. I quickly mastered the four pillars of OOP: encapsulation, inheritance, polymorphism, and abstraction.
 
-In a recent enterprise project, I designed a transaction processing system that relied heavily on these principles. I utilized encapsulation to protect sensitive financial data within private class variables, exposing them only through strictly controlled getter and setter methods. This ensured that the state of our financial objects could not be maliciously or accidentally altered.
+In a previous enterprise project, I designed a transaction processing system that relied heavily on these principles. I utilized encapsulation to protect sensitive financial data within private class variables, exposing them only through strictly controlled getter and setter methods. This ensured that the state of our financial objects could not be maliciously or accidentally altered.
 
 Inheritance and polymorphism were critical in keeping the codebase DRY (Don't Repeat Yourself). I created a base `Transaction` class that contained common properties like timestamps and transaction IDs. I then extended this class to create specific objects like `DepositTransaction` and `WithdrawalTransaction`. Through polymorphism, my systems could process lists of various transaction types uniformly, drastically reducing code complexity.
 
@@ -52,7 +52,7 @@ public abstract class Transaction {
     }
 
     // Abstraction: Subclasses must provide their own specific implementation
-    public abstract void executeTransaction();
+    public abstract void executeTransaction(); 
 }
 ```
 
