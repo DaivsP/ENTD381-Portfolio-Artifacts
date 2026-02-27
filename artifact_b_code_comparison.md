@@ -1,8 +1,8 @@
 # Artifact B: Code Review and Language Comparison
 
-**Context:** Early in the development of the FinPay application, a junior developer had initially implemented complex, data-heavy validation logic for financial transactions entirely within the frontend JavaScript client. I conducted a code review to guide the team member in migrating this logic to a secure, backend Java service, explaining the fundamental differences between scripting languages and compiled programming languages.
+**Context:** Early in the development of the FinPay application, a junior developer initially implemented complex, data-heavy validation logic for financial transactions entirely within the frontend JavaScript client. Mentoring this developer through a code review became a profound learning experience for my own architectural understanding. While guiding them to migrate this logic to a secure, backend Java service, I solidified my comprehension of the fundamental, practical differences between scripting languages and compiled programming languages.
 
-*(Note: The following code has been simplified and sanitized for demonstration purposes, but is directly based on actual production code from our `finpass-common` architecture.)*
+I learned that while JavaScript's dynamic typing and browser execution offer rapid UI feedback, they are inherently insecure for business logic because the execution environment is dictated by the client. Conversely, translating this logic into Java taught me to appreciate how the JVM provides a controlled, secure environment where compile-time static type-checking drastically reduces runtime errors. This experience shifted my perspective from simply "writing code that works" to "designing systems that are secure and robust by architecture."
 
 Below is the side-by-side comparison of the initial JavaScript implementation and the refactored Java backend solution.
 

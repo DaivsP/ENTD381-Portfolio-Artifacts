@@ -1,13 +1,13 @@
 # Artifact C: Sanitized GitHub Code Snippets
 
 ## Narrative
-Creating Object-Oriented Programs is the core of my technical expertise. I was initially trained in OOP principles during my early years as a developer, where I learned to model real-world entities into reusable code components. I quickly mastered the four pillars of OOP: encapsulation, inheritance, polymorphism, and abstraction.
+While I was formally introduced to Object-Oriented Programming (OOP) early in my career, my true understanding of these principles emerged through architecting a complex transaction processing system. I learned that OOP is not just a syntax choice, but a methodology for modeling real-world complexity into manageable, safe components.
 
-In a previous enterprise project, I designed a transaction processing system that relied heavily on these principles. I utilized encapsulation to protect sensitive financial data within private class variables, exposing them only through strictly controlled getter and setter methods. This ensured that the state of our financial objects could not be maliciously or accidentally altered.
+I learned the true value of **Encapsulation** when dealing with sensitive financial information. By hiding state variables behind strictly controlled getter and setter methods, I discovered how to enforce data integrity barriers that prevent malicious or accidental state manipulation by outer system layers. 
 
-Inheritance and polymorphism were critical in keeping the codebase DRY (Don't Repeat Yourself). I created a base `Transaction` class that contained common properties like timestamps and transaction IDs. I then extended this class to create specific objects like `DepositTransaction` and `WithdrawalTransaction`. Through polymorphism, my systems could process lists of various transaction types uniformly, drastically reducing code complexity.
+Implementing the system's architecture taught me how **Inheritance** and **Polymorphism** work in tandem to eliminate redundant code (DRY principle). By creating a base `Transaction` class and extending it into specific `DepositTransaction` and `WithdrawalTransaction` objects, I learned how to centralize shared logic. More importantly, polymorphism taught me how to write decoupled systems—I realized I could process vast lists of diverse transactions uniformly through a single interface, without the processing engine needing to know the specific underlying class type.
 
-As a manager, I now enforce these OOP standards across my development teams. I conduct rigorous architectural reviews to ensure our Java applications are modular, reusable, and maintainable. Included below are sanitized code snippets from a repository I built, demonstrating the creation of class hierarchies, the implementation of interfaces, and the use of access modifiers to build a secure Object-Oriented Program.
+Applying these four pillars fundamentally changed how I approach software design. As a manager, I now rely on this deep understanding to conduct architectural reviews, teaching these exact concepts to transition my teams from writing procedural scripts to engineering modular, maintainable, and secure Java applications. Included below are sanitized code snippets from a repository I built, serving as an artifact of this exact learning journey.
 
 ---
 
