@@ -1,13 +1,13 @@
 # Artifact E: Spring Boot Web Layer & Integration Tests
 
 ## Narrative
-Developing web applications using Java has been a continuous thread throughout my career. I initially learned the mechanics of HTTP by building web applications using raw Java Servlets—manually parsing request streams and printing dynamic HTML responses. That granular experience laid the foundation for my transition into mastering modern, enterprise-grade frameworks.
+Developing web applications using Java has been a continuous thread throughout my career. I initially learned the mechanics of HTTP by building web applications using raw Java Servlets, manually parsing request streams and printing dynamic HTML responses. That granular experience laid the foundation for my transition into mastering modern, enterprise-grade frameworks.
 
 I now oversee the development of RESTful web services utilizing the Spring Boot framework. Learning Spring Boot shifted my paradigm from "writing web servers" to "architecting decoupled APIs." I learned how to utilize powerful declarative annotations (`@RestController`, `@PostMapping`) to map complex URIs to specific backend methods, seamlessly handling JSON serialization and deserialization without manual boilerplate. Furthermore, integrating Object-Relational Mapping (ORM) tools securely connected these web layers to our underlying databases.
 
 However, the most significant milestone in my web development journey was internalizing the absolute necessity of automated presentation-layer testing. I learned that an API contract isn't truly robust until it is programmatically verified. By mastering Spring's `MockMvc` framework, I learned how to simulate client HTTP requests to guarantee our web controllers return the correct JSON HTTP status codes (`2xxSuccessful`, `5xxInternalServerError`) without needing to launch a full web server or a physical browser. This test-driven approach ensures that our web applications remain highly available and contractually sound during rapid deployment lifecycles.
 
-**Below are sanitized Java snippets from a production financial repository I manage.** The first snippet demonstrates a REST Controller handling complex routing and payload extraction. The second snippet acts as my artifact of learning, showing the integration test suite utilizing `MockMvc` to mathematically prove the web layer operates correctly.
+**Below are sanitized Java snippets from a production financial repository I managed.** The first snippet demonstrates a REST Controller handling complex routing and payload extraction. The second snippet acts as my artifact of learning, showing the integration test suite utilizing `MockMvc` to mathematically prove the web layer operates correctly.
 
 ---
 
@@ -61,7 +61,7 @@ public class PaymentController {
         paymentService.createAndChargePayment(encounterId, paymentDetail);
 
         // Web logic: Returning appropriate HTTP Status Codes based on transaction success or failure
-        if (paymentDetail.isPaymentStatusIsStripeException()) {
+        if (paymentDetail.isPaymentStatusStripeException()) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(paymentDetail);
         } else {
             return ResponseEntity.ok(paymentDetail); // 200 OK
